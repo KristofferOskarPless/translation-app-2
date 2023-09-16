@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TextField({ placeholder, value }) {
 return (
-<div className="relative mt-2 rounded-md shadow-lg">
+<div className="relative mt-6 rounded-md shadow-lg">
 <input
 type="text"
 placeholder={placeholder}
