@@ -1,4 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import portrait from '../../public/portrait.png'
 
 function Navigation() {
   return (
@@ -48,15 +51,15 @@ function Navigation() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                <a href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-md font-medium" aria-current="page">
-                  Translations
-                </a>
-                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
+                <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
+                  Translate
+                </Link>
+                <Link href="/dictionary" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
                   Dictionary
-                </a>
-                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
+                </Link>
+                <Link href="/score" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
                   Score
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -94,9 +97,9 @@ function Navigation() {
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  <Image
                     className="h-8 w-8 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    src={portrait}
                     alt=""
                   />
                 </button>
